@@ -1,4 +1,42 @@
 .main {
     position: relative;
-    margin: 50px;
+    width: 100%;
 }
+
+#list-container {
+    background-color: #3776ff;
+    display: flex; /* 横並びにする */
+    justify-content: space-evenly; /* 各要素を均等に配置 */
+    padding: 10px 0;
+    list-style: none;
+    align-items: center; /* 縦方向の中央揃え */
+    width: 100%; /* 幅を100%にして調整 */
+}
+
+.list-item {
+    border: solid;
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 縦線をリストアイテムの後ろに追加 */
+.list-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -7.5px; /* 余白の影響を調整 */
+    top: 50%;
+    transform: translateY(-50%); /* 縦方向の中央揃え */
+    width: 2px; /* 縦線の太さ */
+    height: 80%; /* 縦線の高さ */
+    background-color: white; /* 縦線の色 */
+}
+
