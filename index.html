@@ -9,19 +9,28 @@
 </head>
 
 <body>
-	<h1>しゃもじ</h1>
-	<div class="main">
+	<div class="headerDiv">
+		<h1><a href="index.html" id="titleLink">しゃもじ</a></h1>
 		<div id="list-container">
-			<div class="list-item">活動記録</div>
-			<div class="list-item">参加申請</div>
-			<div class="list-item">3</div>
-			<div class="list-item">4</div>
-			<div class="list-item">5</div>
+			<button class="list-item" onclick="window.location.href='activities.html'">活動記録</button><div id="white_line"></div>
+			<button class="list-item">参加申請</button><div id="white_line"></div>
+			<button class="list-item">3</button><div id="white_line"></div>
+			<button class="list-item">4</button><div id="white_line"></div>
+			<button class="list-item">5</button>
 		</div>
-		<hr style="width: 90%;">
+	</div>
+	<div class="main">
 		<h3>しゃもじ</h3>
-		岡山学生ボランティア団体
-		<hr style="width: 90%;">
+		学生有志による岡山のボランティア団体
+		<hr style="width: 80%;">
+		<ul style="padding-top: 100px;">
+			<li type="none">
+				<button class="social-button" onclick="window.open('https://www.instagram.com/shamozi._.volunteer/', '_blank');">
+					<img src="image/Instagram_Glyph_Gradient.png" alt="Logo" class="icon">
+					<img src="image/640px-Instagram_logo.svg.png" alt="Text" class="logotext">
+				</button>	
+			</li>
+		</ul>	
 	</div>
 </body>
 </html>

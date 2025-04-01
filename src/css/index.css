@@ -1,6 +1,22 @@
-.main {
-    position: relative;
+body {
+    top: 0;
+    left: 0;
+    margin: 0;
     width: 100%;
+}
+
+.main {
+    padding: 20px;
+    position: relative ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* これで要素のサイズを固定 */
+}
+
+#titleLink {
+    text-decoration: none; /* 下線を消す */
+    color: inherit; /* 親の文字色を引き継ぐ */
 }
 
 #list-container {
@@ -14,29 +30,43 @@
 }
 
 .list-item {
-    border: solid;
-    background: none;
+    background-color: rgba(55,118,255,0);
     color: white;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 8px;
+    border: none;
+    min-width: 200px;
+    max-width: 300px;
     text-decoration: none;
     font-size: 18px;
-    min-width: 100px;
+    text-shadow: black 2px 2px;
     position: relative;
-    display: flex;
     align-items: center;
+    text-wrap-mode: nowrap ;
+    transition: 100ms;
 }
 
-/* 縦線をリストアイテムの後ろに追加 */
-.list-item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -7.5px; /* 余白の影響を調整 */
-    top: 50%;
-    transform: translateY(-50%); /* 縦方向の中央揃え */
-    width: 2px; /* 縦線の太さ */
-    height: 80%; /* 縦線の高さ */
-    background-color: white; /* 縦線の色 */
+.list-item:hover {
+    background-color: hwb(221 52% 0%);
 }
 
+#white_line{
+    border: solid white 0px;
+    min-width: 2px;
+    background-color: white;
+    height: 55px ;
+    box-shadow: black 2px 2px;
+}
+
+.icon {
+    width: 29px; /* 最小サイズを守る */
+    height: 29px;
+    padding: 14px;
+}
+
+.logotext {
+    height: 40px; /* 変更したい高さ */
+    width: auto; /* アスペクト比を維持 */
+    margin-right: 8px;
+}
